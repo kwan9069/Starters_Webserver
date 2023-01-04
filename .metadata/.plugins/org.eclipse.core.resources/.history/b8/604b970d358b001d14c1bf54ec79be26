@@ -1,0 +1,38 @@
+package test;
+
+import java.io.IOException;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class FlowServlet
+ */
+@WebServlet("/FlowServlet")
+public class FlowServlet extends HttpServlet {
+	public void init(ServletConfig config)throws ServletException {
+		System.out.println("1.init 호출(수정)");
+	}// 실행
+
+	public void destroy() {
+		System.out.println("n.destroy ㄴㄴ호출");
+	} //서블릿 재컴파일시(이전 서블릿 메모리 삭제 시점)/tomcat 종료 시점에서 destroy 호출
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("n.doGet호출");
+	} //실행-요청-처리-응답
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+
+
+}

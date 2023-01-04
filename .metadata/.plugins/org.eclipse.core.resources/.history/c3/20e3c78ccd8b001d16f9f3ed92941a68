@@ -1,0 +1,33 @@
+package test;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class RequestTestServlet
+ */
+@WebServlet("/request")
+public class RequestTestServlet extends HttpServlet {
+	
+
+	protected void doGet
+	(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println(request.getContextPath()); // /servlettest
+		System.out.println(request.getMethod()); //get
+		System.out.println(request.getRequestURI());  // /servletest/request
+		System.out.println(request.getServletPath()); // /request
+		PrintWriter out=response.getWriter();
+		System.out.println(request.getRemoteAddr()); // 0:0:0:0:0:0:1=ip v4 localhost/
+		out.println("<h1>hello output</h1>");
+		out.println("<script src='/"+request.getContextPath()+"/jquery-3.6.1.min.js'></script>");
+				
+	}
+
+}

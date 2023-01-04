@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> 로그인 하세요 </h1>
+<!-- 
+서블릿 url --"/a"--http://localhost:8081/servlettest/a
+html 태그 속성 url --"/a" -- http://localhost:8081/a
+ -->
+<!-- <form action=" http://localhost:8080/servlettest/loginprocess"> -->
+<!-- <form action="loginprocess"> -->
+<form action="/servlettest/loginprocess" method="post">
+아이디 입력:<input type="text" name= "id" ><br>
+암호 입력:<input type="password" name= "pw" ><br>
+<select name="title" multiple="multiple">
+<option> <웹클라이언트 과정></option>
+<option> <웹서버 과정></option>
+<option> <데이터베이스 과정></option>
+<option> <서비스 배포 과정></option>
+</select>
+<input type=submit value="로그인">
+</form>
+</body>
+</html>

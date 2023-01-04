@@ -1,0 +1,27 @@
+package test;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class RequestTestServlet
+ */
+@WebServlet("/Request")
+public class RequestTestServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet
+	(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println(request.getContextPath()); // /servlettest
+		System.out.println(request.getMethod()); //get
+		System.out.println(request.getRequestURI());  // /servletest/request
+		System.out.println(request.getServletPath()); // /request
+		System.out.println(request.getRemoteAddr());
+	}
+
+}
