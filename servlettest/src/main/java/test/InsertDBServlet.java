@@ -15,50 +15,50 @@ import dto.MemberDTO;
 /**
  * Servlet implementation class InsertDBServlet
  */
-@WebServlet("/insertDB")
-public class InsertDBServlet extends HttpServlet {
-	
-	
-
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		req.setCharacterEncoding("utf-8");
-		resp.setContentType("text/html;charset=utf-8");
-		String id=req.getParameter("id");
-		String pw=req.getParameter("pw");
-		String name=req.getParameter("name");
-		String email=req.getParameter("email");
-		String phone=req.getParameter("phone");
-		String addr=req.getParameter("addr");
-		String indate = null;
-		PrintWriter out=resp.getWriter();
-		MemberDTO dto=new MemberDTO(id,pw,name,phone,email,indate,addr);
-		MemberDAO dao=new MemberDAO();
-		int mem=dao.insertMember(dto);
-		int mem2=dao.insertMemberemail(dto);
-		//3. 정상로그인/ 암호 다시 입력/ 회원가입 대상 응답
-		/*  dto id,pw 저장 상태
-		 *  dto id 저장, pw null
-		 *  dto null
-		 */
-		String result="";
-		if(mem==1 && mem2==1) {
-			result="<h1>"+id+" 회원님 정상적으로 회원가입 됐습니다. </h1>";
-		}
-		else if(mem==0 && mem2==1) {
-			result="<h1>"+id+" 회원님 가입이 불가능 합니다. 아이디가 중복됩니다."
-					+ " <a href='insert_db.html'>재가입 하러가기 </a></h1>";
-		}
-		else if(mem2==0 && mem==1){
-			result="<h1>"+id+" 회원님 가입이 불가능 합니다. 이메일 주소가 중복됩니다."
-					+ " <a href='insert_db.html'>재가입 하러가기 </a></h1>";
-		}
-
-					out.println(result);
-			//응답
-		}
-		
-		// TODO Auto-generated method stub
-	}
+//@WebServlet("/insertDB")
+//public class InsertDBServlet extends HttpServlet {
+//	
+//	
+//
+//	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+//			throws ServletException, IOException {
+//		req.setCharacterEncoding("utf-8");
+//		resp.setContentType("text/html;charset=utf-8");
+//		String id=req.getParameter("id");
+//		String pw=req.getParameter("pw");
+//		String name=req.getParameter("name");
+//		String email=req.getParameter("email");
+//		String phone=req.getParameter("phone");
+//		String addr=req.getParameter("addr");
+//		String indate = null;
+//		PrintWriter out=resp.getWriter();
+//		MemberDTO dto=new MemberDTO(id,pw,name,phone,email,indate,addr);
+//		MemberDAO dao=new MemberDAO();
+//		int mem=dao.insertMember(dto);
+//		int mem2=dao.insertMemberemail(dto);
+//		//3. 정상로그인/ 암호 다시 입력/ 회원가입 대상 응답
+//		/*  dto id,pw 저장 상태
+//		 *  dto id 저장, pw null
+//		 *  dto null
+//		 */
+//		String result="";
+//		if(mem==1 && mem2==1) {
+//			result="<h1>"+id+" 회원님 정상적으로 회원가입 됐습니다. </h1>";
+//		}
+//		else if(mem==0 && mem2==1) {
+//			result="<h1>"+id+" 회원님 가입이 불가능 합니다. 아이디가 중복됩니다."
+//					+ " <a href='insert_db.html'>재가입 하러가기 </a></h1>";
+//		}
+//		else if(mem2==0 && mem==1){
+//			result="<h1>"+id+" 회원님 가입이 불가능 합니다. 이메일 주소가 중복됩니다."
+//					+ " <a href='insert_db.html'>재가입 하러가기 </a></h1>";
+//		}
+//
+//					out.println(result);
+//			//응답
+//		}
+//		
+//		// TODO Auto-generated method stub
+//	}
 
 

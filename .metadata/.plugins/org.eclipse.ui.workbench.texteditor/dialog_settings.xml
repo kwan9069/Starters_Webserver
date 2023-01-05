@@ -4,16 +4,16 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="getMemberemail"/>
+		<item key="selection" value="getMember"/>
 		<list key="findhistory">
+			<item value="getmember"/>
+			<item value="session"/>
+			<item value="getmemberlist"/>
 			<item value="insertmemberemai"/>
 			<item value="getmemberemail"/>
 			<item value="1번"/>
-			<item value="getmember"/>
 			<item value="insertMem"/>
 			<item value="insertMe"/>
-			<item value="getMember"/>
-			<item value="insertmemb"/>
 		</list>
 		<list key="replacehistory">
 		</list>

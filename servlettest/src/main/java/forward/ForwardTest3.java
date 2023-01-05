@@ -19,7 +19,7 @@ public class ForwardTest3 extends HttpServlet {
 		// forward3?menu=memberlist&page=3--> html form 
 		//forward3?menu=login
 		String menu = request.getParameter("menu");
-		if(menu.equals("memberlist")) {
+		if(menu.equals("memberlist")) { 
 			// 한페이지당 출력 멤버수 = 4 
 			//MemberDAO 객체 생성
 			//getMemberList 호출 - 결과리턴

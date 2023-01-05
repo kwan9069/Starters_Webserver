@@ -1,15 +1,33 @@
 package dto;
 
-public class MemberDTO  {
-
-	String id,pw,name,email,phone,address,indate;
-	// 자바 - int, double, date, String
-	// db - int,double,datetime, char/varchar
+public class MemberDTO {
+	String id, pw, name, email, phone, address, indate;
+	// 자바 - int, double, date , String 
+	// db- int, double, datetime , char/varchar
 	// hire_date, "%Y"
-
+	public MemberDTO() {}
+	public MemberDTO(String id, String name, String indate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.indate = indate;
+	}
+	
+	
+	public MemberDTO(String id, String pw, String name, String email, String phone, String address, String indate) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.address = address;
+		this.indate = indate;
+	}
 	public String getId() {
 		return id;
 	}
+
 
 	public void setId(String id) {
 		this.id = id;
@@ -63,30 +81,12 @@ public class MemberDTO  {
 		this.indate = indate;
 	}
 
-	public MemberDTO(String id,String name,String indate) {
-		super();
-		this.id = id;
-		this.name=name;
-		this.indate = indate;
-	}
-	public MemberDTO() {
-		super();
-	}
-	
-	public MemberDTO(String id,String pw,String name,String phone,String email,String indate, String address) {
-		super();
-		this.id = id;
-		this.pw=pw;
-		this.name=name;
-		this.phone=phone;
-		this.email=email;
-		this.address=address;
-		this.indate = indate;
-
-	}
+	@Override
 	public String toString() {
 		return "MemberDTO [id=" + id + ", pw=" + pw + ", name=" + name + ", email=" + email + ", phone=" + phone
-				+ ", address=" + address + "]";
+				+ ", address=" + address + " , indate= " + indate + "]";
 	}
+	
+	
 	
 }

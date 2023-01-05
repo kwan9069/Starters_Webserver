@@ -5,4 +5,5 @@ public class ConnectionInform {
 	public final static String JDBC_URL = "jdbc:mariadb://localhost:3306/memberdb";
 	public final static String USERNAME = "jdbc";
 	public final static String PASSWORD = "jdbc";
+	
 }

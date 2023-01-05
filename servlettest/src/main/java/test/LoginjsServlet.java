@@ -17,11 +17,10 @@ public class LoginjsServlet extends HttpServlet {
 		String id = request.getParameter("id");//null
 		String pw = request.getParameter("pw");
 		String role = request.getParameter("role");
-		String output = "";
 		if(id == null || id.equals("")) {
 			id="손님";
 		}
-		
+		String output = "";
 		if(role.equals("admin")) {
 			output = "<h1>" + id + " 관리자님 환영합니다</h1>";
 		}
