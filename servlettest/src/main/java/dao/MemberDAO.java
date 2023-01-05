@@ -107,7 +107,7 @@ public class MemberDAO {
 		return count;
 	}//getTotal	
 	
-	ArrayList<MemberDTO> getMemberList(int page, int memberPerPage) {
+	public ArrayList<MemberDTO> getMemberList(int page, int memberPerPage) {
 		ArrayList<MemberDTO> list = new ArrayList();
 		Connection con= null;
 		PreparedStatement pt = null;
@@ -235,7 +235,7 @@ public class MemberDAO {
 		}finally {
 			try {
 				pt.close();
-				con.close(); //pool로 반납
+				con.close(); //pool로 반납 1개 반납 JDNI 방식
 			}catch(Exception e) {}
 		}
 		return dto;

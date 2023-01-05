@@ -1,0 +1,27 @@
+package url;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class URLTESTServlet
+ */
+@WebServlet("/*")
+public class URLTESTServlet extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+			//http://ip:port/servlettest/product
+			//http://ip:port/servlettest/board --> boardwriting
+		//http://ip:port/servlettest/member --> forward4
+		//http://ip:port/servlettest/product --> 없습니다.
+		System.out.println(request.getRequestURI());
+	}
+
+	
+
+}

@@ -1,0 +1,36 @@
+package forward;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ForwardTest1
+ */
+@WebServlet("/forward1")
+public class ForwardTest1 extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
+	String id=request.getParameter("id");
+	request.setAttribute("upperid", id.toUpperCase()); //attribute는 자바의 객체 다 가능
+	response.setContentType("text/html;charset=utf-8");
+	PrintWriter out=response.getWriter();
+//	out.print("<h1>"+request.getAttribute("upperid")+ "회원님 반갑습니다.</h1>");
+	// "웹 어플리케이션명/"
+//	out.println("<h1>forwardTest1 클래스입니다</h1>");//무시
+	RequestDispatcher rd=request.getRequestDispatcher("/forward2");//현재 콘텍스트에 있는 파일
+	rd.forward(request, response);  
+//	out.println("<h1>forwardTest1 클래스입니다</h1>");//무시
+	System.out.println("<h1>forwardTest1 클래스입니다</h1>");
+	}
+	
+
+}
