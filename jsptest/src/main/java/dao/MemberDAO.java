@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 import javax.naming.Context;
@@ -95,11 +96,11 @@ public class MemberDAO {
 
 	}
 
-	public ArrayList<MemberDTO> getMemberList(int Page, int memberPerPage) {
+	public List<MemberDTO> getMemberList(int Page, int memberPerPage) {
 		Connection con = null;
 		PreparedStatement pt = null;
 		int cnt = 0;
-		ArrayList<MemberDTO> list = new ArrayList();
+		List<MemberDTO> list = new ArrayList();
 
 		try {
 			

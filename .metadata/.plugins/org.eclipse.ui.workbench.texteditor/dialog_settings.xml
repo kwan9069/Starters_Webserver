@@ -4,11 +4,11 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="getMember"/>
+		<item key="selection" value="getMemberList"/>
 		<list key="findhistory">
+			<item value="getmemberlist"/>
 			<item value="getmember"/>
 			<item value="session"/>
-			<item value="getmemberlist"/>
 			<item value="insertmemberemai"/>
 			<item value="getmemberemail"/>
 			<item value="1번"/>

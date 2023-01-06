@@ -2,6 +2,7 @@ package hw;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,9 +26,10 @@ public class Send extends HttpServlet {
 		String menu=request.getParameter("menu");
 		if(menu.equals("memberlist")&&(id.equals("admin"))) {
 			MemberDAO dao=new MemberDAO();
-			ArrayList<MemberDTO> list=dao.getMemberList(Integer.parseInt(request.getParameter("page")), 4);
-			RequestDispatcher dis=request.getRequestDispatcher("/result.jsp");
+			List<MemberDTO> list=dao.getMemberList(Integer.parseInt(request.getParameter("page")), 4);
 			request.setAttribute("memberlist", list);
+			RequestDispatcher dis=request.getRequestDispatcher("/result.jsp");
+			
 			dis.forward(request, response);
 		}
 	}
