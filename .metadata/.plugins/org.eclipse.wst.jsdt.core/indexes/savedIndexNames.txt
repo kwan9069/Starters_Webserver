@@ -1,12 +1,7 @@
 INDEX VERSION 1.4+C:\sba\workspace_webserver\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1498483580.index
-3852519468.index
-786151603.index
-1044199867.index
-1318876481.index
-386001870.index
 1199965703.index
-3471582578.index
-3852519468.index
-1251318790.index
-2284504601.index
+3308393723.index
+3511560534.index
+3703758790.index
+3316833723.index
