@@ -125,6 +125,7 @@ public class MemberDAO {
 				// rs.getString("name");
 				// rs.getString("indate");
 				dto.setPw(rs.getString("pw"));
+				
 				list.add(dto);
 			}
 
