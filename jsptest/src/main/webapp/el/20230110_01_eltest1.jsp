@@ -22,7 +22,8 @@
 <h1>${100+100 }</h1> 
 <h1>${requestScope.dto }</h1>
 <h1>${sessionScope.dto }</h1>
+${100}의 결과는 = 100
 </body>
 </html>
 
-${100}의 결과는 = 100
+
